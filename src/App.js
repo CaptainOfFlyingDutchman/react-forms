@@ -40,8 +40,8 @@ class App extends Component {
 
   renderBirthYearOptions = () => {
     const BEGINNING_YEAR = 1940;
-    let currentYear = new Date(Date.now()).getYear();
-    let year1940 = new Date(BEGINNING_YEAR, 0, 1).getYear();
+    const currentYear = new Date(Date.now()).getYear();
+    const year1940 = new Date(BEGINNING_YEAR, 0, 1).getYear();
     const years = Array.from(Array(currentYear - year1940 + 1), (x, i) => BEGINNING_YEAR + i);
     return years.map(year => <option value={year} key={year}>{year}</option>);
   };
